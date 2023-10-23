@@ -1,0 +1,700 @@
+
+
+27/05/2023
+
+Power BI Architecture
+
+Data flows
+
+Raw Data - OLTP
+	- Excel
+	- csv
+	- Text files
+	- SQLSERVER
+	- ORACLE
+	- DB2
+	- Azure
+
+POWER BI DESKTOP
+	- Power Query
+		- ETL (Extract, Transform, Load)
+		- Data cleaning / Data shaping
+
+	- Power Pivot
+		- Data Modelling / Dimensional Modelling
+			- Creating a schema by giving relationships between FACT and DIM Table
+		- Data Enhancement
+			- Creating New information out of existing information
+			- DAX
+			- Data Analysis eXpressions
+	- Power View
+		- Creating visuals / graphs as per requirement
+		- Report creation.
+
+POWER BI SERVICE
+		- Publish the Report
+		- From here we will apply securities / automation and share it with end users / client.
+
+28/05/2023
+
+Power BI Interphase
+
+- Ribbon Menu ( At the Top )
+- Fields Pane / Data Pane ( Extreme Right )
+- Vizualization Pane
+- Filters pane
+- Report Canvas
+- page Navigation
+
+
+What are the different view available in Power bi desktop
+	- Report View
+	- Data View
+	- Model view
+
+Power View / Report View
+
+FACT vs DIMENSION
+
+FACT - Which we want to Analyse
+	- If the col to be considered as a FACT we have 2 rules to satisfy
+
+		- It has to be a Numeric col
+		- When we do some aggregation like SUM it should give us some meaningful result.
+
+
+DIMENSION - By which we want to analayse the FACT
+
+Field wells - Here we need to drang the colsms/ fields to get a visual.
+
+	- BAR Chart
+		- X axis - Fact col / Numeric value
+		- Y axis - Dim col
+	- Col Chart
+		- Y axis - Fact col / Numeric value
+		- X axis - Dim col
+
+29/05/2023
+
+Create the visuals
+
+When we want to do some comparision betwwen FACT values better choose for any BAR / COL charts
+	- Stacked bar chart
+	- Clustered bar chart
+	- Stacked col chart
+	- Clustered col chart
+	- 100% stacked bar chart
+	- 100% stacked col chart.
+
+Trending data when a date col is involved.
+	- Line chart
+	- Area chart
+	- Stacked area chart
+
+Combination Charts
+	- Line and Stacked col chart
+	- Line and Clustered col chart
+
+Ribbon Chart.
+
+30/05/2023
+
+Formatting options
+
+Waterfall chart
+Funnel chart
+Scatter chart - This is the only animation visual available in PBI
+
+When the no of attributes are less than 7
+Pie chart
+Donut chart
+
+When the no of atributes are more than 7 and less than 15
+Treemap
+
+Map visulas use Microsoft Bing browser
+Map
+Filled Map
+
+Gauge chart
+This requires a Target value
+
+For KPI Values use
+Card
+Multicard
+KPI Chart
+
+Slicer - This is used to filter the visuals in a page
+	- Vertical
+	- Tiles
+	- Dropdown
+
+31/05/2023
+
+When we want to show the summarized data in the form of a visual
+	- Table chart
+		- This will have only 1 field well
+		- This will help us in col wise totals only
+	- Matrix chart
+		- This is a pivot chart
+		- Having 3 field wells
+			- Rows
+			- Colms
+			- values
+		- This helps in row and col wise totals.
+
+
+What are the imp visuals which we need to be very clear
+
+	- Stacked / clustured bar
+	- Stacked / clustered col
+	- Line chart
+	- Pie chart / donut chart
+	- Card
+	- Slicer
+	- Table 
+	- Matrix
+
+How do you control your visual interactions ?
+	- Select the visual from where you want to control other visuals
+	- Click on format in the ribbon menu
+	- Click on edit interactions
+		- We will see some new options appering on top of each visual
+		- Filter - This will filter the data and will disable the highlight interaction
+		 Highlight - This is the default behaviour and will show the highlited part
+		 None - This will stop the interaction itself.
+	- Select the required type
+	- Again click on edit interactions.
+
+Drill down
+		- When we want to see some hierarchy data we will use this option
+
+Create hierarchy.
+
+
+1/06/2023
+
+What are the different types of Filters available in Power BI ?
+
+	- Filter on this Visual - Visual level filter
+		- Basic 
+		- Advanced
+		- TOP N
+
+	- Filters on this page  - Page level filter
+		- Basic 
+		- Advanced
+	- Filters on all pages  - Report level filter
+		- Basic 
+		- Advanced
+
+When we use Date col in any of the above filters
+		- Basic 
+		- Advanced
+		- Relative date
+		- Relative Time
+
+If you want to Filter data in specififc pages
+	- we can use slicer and sync slicer option in view tab.
+
+	- Drill through.
+		- This is used when we want to pass a filter condition from one page to a different page.
+
+
+2/06/2023
+
+Bookmarks and Selection
+
+Step 1 - Create all the required visuals in a single page, it can be one above the other.
+Step 2 - Insert the required buttons.
+Step 3 - In view Tab click on SELECTION
+Steo 4 - Hide all the visuals which are not required for a particular button.
+Step 5 - Click on Bookmark next to selection
+Step 6 - Add a Bookmark and rename it as per the button.
+Step 7 -  Update the bookmark
+
+How to assign the buttons to the Bookmarks
+Step 1 - Select the button
+Step 2 - In format, enable the Action
+Step 3 - Expand the Action
+Step 4 - Type - Bookmark and Bookmark should be The name of the bookmark created for this button.
+
+
+If we want to apply filters to specific pages we can use sync slicer option.
+
+Tooltip page
+Step 1 - Create a new page
+Step 2 - Go to format your page
+Step 3 - Page Information - allow use as tooltip should be on
+Step 4 - Canvas settings - Type should be tooltip
+Step 5 - Create your required visuals
+Step 6 - comeback to the source page
+Step 7 - select the required visual
+Step 8 - go to format your visual
+Step 9 - Genral - Tooltips - Type should be report page - Page should be the tooltip page which we have created.
+
+05/06/2023
+
+Assignment Review.
+
+
+6/6/2023
+
+Power Pivot
+
+		- Data Modelling / Dimensional Modelling
+			- Creating a schema by giving relationships between FACT and DIM Table
+		- Data Enhancement
+			- Creating New information out of existing information
+			- DAX
+			- Data Analysis eXpressions
+
+Data modelling
+	- Creating relationships between fact and dim tables.
+
+FACT Table
+	- This table consists of all the FACT colms which we want to analyse
+	- This will have all the foreign keys
+	- In genral the fact table will have more no of rows
+
+DIM Table
+	- This consists of dim colms by which we want to analyse the facts
+	- This will have the primary key
+	- In genral the dim table will have less no of rows
+
+Foreign key vs Primary key
+	Foreign key - This will have atlest one duplicate value.
+		    - This is used as a reference col to create the relationship with the primary key of the Dim table.
+
+	Primary key - This key should consists if only unique values
+			- No duplicates
+			- No null values
+
+Different types of cardinaliy
+	- One to many
+	- Many to one
+	- One to one
+	- Many to many
+
+How to manage Many to Many relationships
+	- We need to create a bridge table
+
+When to use cross filter direction both ways
+	- when the filtering is not towards to FACT table change the direction to both ways.
+
+Different types of Data models
+	- Star schema
+		- 1 fact table and multiple dim tables
+		- each dim table will be directly connected to the fact table.
+
+	- Snow flake schema
+		- 1 fact table and multiple dim tables
+		- at least one dim table is indirectly connected to the fact table.
+
+	- Galaxy schema / Hybrid schema.
+		- More than 1 fact table
+		- multiple dim tables.
+
+Which schema is Faster ?
+	- Star schema.
+
+We created a model from scratch.
+
+8/6/2023
+DAX is the language used for Data enhancemnet
+	- Data Analysis eXpressions.
+
+What we create ?
+	- measures
+		- These are the aggregate values.
+		- Does not consume memory
+	- Calculated colms
+		- When we need row wise calculations.
+		- These will consume memory
+
+Types of Measures
+	- Implicit measures
+	- Explicit measures
+
+Diffrent types of Functions Available.
+- Math and Statistical Functions
+- Filter functions
+- Date functions
+- Logical functions
+- Time Intellegence functions
+- Text functions.
+	
+
+Math and Statistical functions
+SUM - It adds up all the values in a particular col
+SUMX - This evaluates an expression based on a particular table.
+
+COUNT
+COUNTX
+COUNTROWS
+DISTINCTCOUNT
+COUNTBLANK
+
+AVERAGE
+AVERAGEX
+
+MAX
+MAXX
+
+MIN
+MINX
+
+
+6/9/2023
+
+Filter functions
+	- CALCULATE - This is used for evaluating an expression based on filter context.
+
+Here by default AND conditionis used between any two filter conditions.
+If you want to apply OR condition use OR operator 
+AND - &&
+OR - ||
+
+6/12/2023
+
+Please calculate the following
+Find the Totalsales by FirstClass shiping mode when the Segment is corporate ?
+Find the Total Qty sold for FirsClass and Second Class shipping mode?
+Find the Average Profit gained in California State?
+
+CALCULATE TABLE - This is used to create a Table based on Filter context.
+
+22/06/2023
+
+SUMMARIZE vs SUMMARIZE COLUMNS
+
+Summarize = SUMMARIZE(Orders,Orders[Category],Orders[Sub-Category],"TotalSales",sum(Orders[Sales]))
+Summarize colms = SUMMARIZECOLUMNS(Orders[Category],Orders[Sub-Category],FILTER(Orders,Orders[Region]="East"),"TotalSales",sum(Orders[Sales]),"TotalProfit",sum(Orders[Profit]))
+
+
+-----Date Functions-------------
+
+Date Dimension table is Mandatory in a data model for using Time Intellegence functions.
+DATE
+YEAR
+QUARTER - Qtr1 ---> Qtr-1
+MONTHNO
+MONTH
+WEEKNO
+WEEK
+
+CALENDAR vs CALENDARAUTO
+
+DIM_Date = CALENDAR(min(Orders[Order Date]),max(Orders[Ship Date]))
+Year = YEAR(DIM_Date[Date])
+Quarter = CONCATENATE("Qtr-", QUARTER(DIM_Date[Date]))
+MonthNo = MONTH(DIM_Date[Date])
+Month = FORMAT(DIM_Date[Date],"MMM")
+WeekDay = WEEKDAY(DIM_Date[Date])
+WeekName = FORMAT(DIM_Date[Date],"DDD")
+
+26/03/2023
+
+----Logical Functions----------
+
+F.Month = IF(DIM_Date[MonthNo] < 4, DIM_Date[MonthNo] +9,DIM_Date[MonthNo]-3)
+F.Qtr = IF(DIM_Date[MonthNo] < 4,"Qtr-4",IF(DIM_Date[MonthNo]<7,"Qtr-1",if(DIM_Date[MonthNo]<10,"Qtr-2","Qtr-3")))
+SWITCH = SWITCH(TRUE(),DIM_Date[MonthNo] < 4, "Qtr 4", DIM_Date[MonthNo] < 7, "Qtr 1",DIM_Date[MonthNo] < 10, "Qtr 2", "Qtr 3")
+
+Orders - Qty - >7 , HighQty, <=7, LowQty.
+
+Qty < 5 ----- Lowqty
+Qty > 5 and < 9 ---- Avgqty
+Qty >=9 ----- Highqty
+
+
+----Time Intelligence Functions ---------
+
+PREVIOUSYEAR
+PREVIOUSQUARTER
+PREVIOUSMONTH
+PREVIOUSDAY
+
+
+Growth %
+(CS-PYS) / PYS
+
+CS = SUM(Orders[Sales])
+PYS = CALCULATE(SUM(Orders[Sales]),PREVIOUSYEAR(DIM_Date[Date]))
+YOY Growth% = DIVIDE([CYS]-[PYS],[PYS])
+
+MoM Growth %
+(CMS-PMS) / PMS
+
+CS = SUM(Orders[Sales])
+PMS = CALCULATE(SUM(Orders[Sales]),PREVIOUSMONTH(DIM_Date[Date]))
+MOM Growth% = DIVIDE([CS]-[PMS],[PMS])
+
+QoQ Growth % - Which quarter is having highest growth % ?
+DoD Growth % - Which day we are getting the highest growth % ?
+
+27/06/2023
+
+SAMEPERIODLASTYEAR
+SamePeriod_LY = CALCULATE([CS],SAMEPERIODLASTYEAR(DIM_Date[Date]))
+SPLY_Growth% = DIVIDE([CS]-[SamePeriod_LY],[SamePeriod_LY])
+
+TotalYTD = TOTALYTD([CS],DIM_Date[Date])
+TotalQTD = TOTALQTD([CS],DIM_Date[Date])
+TOTALMTD
+
+------Text Functions--------
+CONCATINATE
+LEN
+LEFT
+RIGHT
+
+Length = LEN(Orders[Customer Name])
+Left = LEFT(Orders[Customer Name],5)
+
+28/06/2023
+
+-------Power Query----------------
+
+Power Query - ETL Tool
+		- Etract, Transform and Load
+		- Data Cleaning / Data Shaping.
+
+
+SQLServer
+SSMS
+
+Power Query Interfase
+Ribbon
+Queries Pane
+Formula bar
+Data Preview
+Query Settings.
+
+How to Import Data from a Database like Sqlserver.
+
+Real Time Senarios
+
+Database - Backend
+Devlopment (Dev)
+	- You will have limited data
+	- Only developers will have access to this environment
+	- Dummy data
+	- No original Data
+	- Client is not interested.
+
+UAT / STG / Test
+	- Most of the times you will have the complete data
+	- Original data
+	- This is used for testing before deploying to Prod.
+
+Production (Prod)
+	- Original data
+	- Complete Data
+	- Client is interested in this data.
+
+Reporting- Frontend
+Devlopment (Dev)
+	- You will have limited data
+	- Only developers will have access to this environment
+	- Dummy data
+	- No original Data
+	- Client is not interested.
+
+UAT / STG / Test
+	- Most of the times you will have the complete data
+	- Original data
+	- This is used for testing before deploying to Prod.
+
+Production (Prod)
+	- Original data
+	- Complete Data
+	- Client is interested in this data.
+
+
+Dev - ABC server
+
+Table A
+a
+b
+c
+
+Table B
+x
+y
+z
+
+STG - PQR Server
+
+Table A
+a
+b
+c
+
+Table B
+x
+y
+z
+
+PRD - ASD Server
+
+Table A
+a
+b
+c
+
+Table B
+x
+y
+z
+
+->Manage Parameters
+	- this is majorly used for deployment
+		Deployment means migrating a report from one environment to other ( Eg: Dev to STG or STG to PROD)
+
+Steps to create a new parameter
+	- In power query home tab
+	- Manage parameters
+	- New parameter
+	- Name the parameter as per your wish
+	- Datatype - Text
+	- Any value
+	- Current value - Here give the server name
+
+30/06/2023
+
+Merge queries vs Append Queries
+
+Merge Queries is nothing but JOINS in SQL
+
+1 common col / Matching col is required in both the Tables for merging.
+LEFT JOIN - All records from Left Table and Matching records from Right Table.
+Right JOIN - All records from Right Table and Matching records from Left Table.
+INNER join - Only matching records from both the tables.
+FULL join - All records from both the Tables.
+
+
+Append Queries is nothing but UNION in SQL
+The Table structure should be the same.
+
+
+Folder option.
+
+03/07/2023
+
+Other Home tab options.
+
+View Tab - This is used to check the health of the data.
+Col quality
+Col profile
+Col distribution.
+
+05/07/2023
+
+Transform Tab Options
+Unpivot colms
+Merge colms.
+
+Add col tab options.
+
+
+07/07/2023
+
+Power bi service
+	- To publish the report
+	- To share the report with end users.
+	- To automate the report.
+
+This is a cloud based service from microsoft.
+
+app.powerbi.com
+
+User name - pegog71617@dotvilla.com
+Password - Naresh@1991
+
+Myworkspace
+	- This is a pvt workspace
+	- Nobody else can access this workspace other than you.
+Workspaces
+	- This workspace is related to specific project.
+	- Many people who have access to this workspace can access the reports published in this workspace.
+
+How to publish the report.
+
+What are the objects available in the workspace.
+	- Report
+	- Dataset
+	- Dashboard
+
+Difference between Report and Dashboard.
+
+any no of dashbpards can be created in a single workspace
+we cannot create a dashboard by using visuals from diffret reports residing in different workspaces.
+
+08/07/2023
+
+Deployment
+
+- Total Freight charges
+- Total Sales
+- Total Tax
+- Top 10 Models based on unit price
+- Top 10 customers based on Sales amount
+
+- What is the Datasource ?
+	- Sqlserver
+
+- Connection details ?
+	- DESKTOP-02AA6UU\SQLSERVER2019
+	- User name
+	- Password
+
+- What is the DB ?
+	AdventureWorksDW2014 - Dev
+	AdventureWorksDW2016 - UAT
+	AdventureWorksDW2019 - PRD
+
+- What are the Tables required for the given requirement
+	- FactInternetSales
+	- DimCustomer
+	- DimProduct
+	- DimDate
+
+Publish the report
+
+Deployment
+	- Migrating a report from one environment to another environment
+	- we will use paframeters to deploy the report
+	- Go to dataset settings
+	- Parameters
+	- Change the Parameter to the required DB
+
+How to automate the reports ?
+	- The data should refresh automatically.
+	- Schedule refresh
+	- On demand refresh
+
+Gateways
+
+Sqlserver-------Gateway-------- PBI Service
+(On-prem) --------------------- (Cloud)
+
+
+Sqlserver-------Do not need a Gateway-------- PBI Service
+(Cloud) ------------------------------------- (Cloud)
+
+Schedule refresh
+	- Go to dataset settings
+	- Apply the gateway
+	- Data source credentials
+	- Refresh
+		- Enable the schedule
+		- Select the frequency ( Daily / weekly )
+		- Time zone
+		- Provide the time.
+	- Apply.
+
+On demand refresh
+	- This is a manual refresh
+	- You need to trigger the refresh manually
+	- Dataset - Refresh now.
